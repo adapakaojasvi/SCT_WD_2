@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+.stopwatch-container {
+    width: 100%;
+    max-width: 520px;
+    padding: 35px 25px;
+    text-align: center;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin-bottom: 25px;
+    font-size: 36px;
+    color: #222;
+}
+
+.display {
+    margin-bottom: 25px;
+    font-size: 48px;
+    font-weight: bold;
+    color: #222;
+    font-variant-numeric: tabular-nums;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+button {
+    min-width: 90px;
+    min-height: 44px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #444;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.laps-section {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.laps-section h2 {
+    margin-bottom: 10px;
+    color: #222;
+}
+
+#lapList {
+    max-height: 220px;
+    overflow-y: auto;
+    padding-left: 30px;
+}
+
+#lapList li {
+    padding: 8px 5px;
+    border-bottom: 1px solid #ddd;
+    font-size: 17px;
+    color: #333;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .stopwatch-container {
+        padding: 28px 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .display {
+        font-size: 36px;
+    }
+
+    button {
+        flex: 1 1 40%;
+    }
+}
